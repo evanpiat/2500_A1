@@ -1,0 +1,8 @@
+piatkowskiEvanA1: piatkowskiEvanA1.o main.o 
+	gcc -Wall -std=c99 piatkowskiEvanA1.o main.o -o piatkowskiEvanA1 
+piatkowskiEvan.o: piatkowskiEvanA1.c piatkowskiEvanA1.h 
+	gcc -Wall -std=c99 -c piatkowskiEvanA1.c   
+main.o: main.c piatkowskiEvanA1.h 
+	gcc -Wall -std=c99 -c main.c 
+clean: 
+	rm *.o piatkowskiEvanA1
